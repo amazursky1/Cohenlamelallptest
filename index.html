@@ -726,6 +726,55 @@ body.menu-open .mobile-menu-button .bars i:nth-child(3){transform:translateY(-6p
   }
 }
 
+
+/* ===== HOMEPAGE ATTORNEY TEASER ===== */
+.attorney-teaser{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:22px;
+  align-items:stretch;
+}
+.attorney-teaser-copy{
+  background:#fff;
+  border:1px solid var(--line);
+  padding:34px;
+}
+.attorney-teaser-copy p{
+  margin:0 0 22px;
+  color:var(--muted);
+  max-width:680px;
+}
+.attorney-teaser-points{
+  display:grid;
+  grid-template-columns:1fr;
+  background:var(--navy);
+  color:#fff;
+  padding:8px 30px;
+}
+.attorney-teaser-points div{
+  padding:18px 0;
+  border-bottom:1px solid rgba(255,255,255,.14);
+}
+.attorney-teaser-points div:last-child{border-bottom:0}
+.attorney-teaser-points strong{
+  display:block;
+  font:600 1.35rem "Source Serif 4",Georgia,serif;
+}
+.attorney-teaser-points span{
+  display:block;
+  margin-top:3px;
+  color:rgba(255,255,255,.62);
+  font-size:.78rem;
+}
+@media(max-width:920px){
+  .attorney-teaser{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .attorney-teaser-copy{padding:24px}
+  .attorney-teaser-copy .btn{width:100%;min-height:50px}
+  .attorney-teaser-points{padding:8px 22px}
+}
+
 </style>
 </head><body>
 
@@ -899,27 +948,34 @@ body.menu-open .mobile-menu-button .bars i:nth-child(3){transform:translateY(-6p
   </div>
  </div>
 </section>
+
 <section class="section" id="attorneys">
- <div class="container">
-  <div class="section-head">
-   <div><div class="kicker" style="color:#926a30">The Attorneys</div><h2>Decades of local and courtroom experience.</h2></div>
-   <p class="lede">Meet the attorneys behind Cohen & Lamela's decades of local and courtroom experience.</p>
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="kicker" style="color:#926a30">Meet Cohen & Lamela</div>
+        <h2>Local attorneys. Decades of experience.</h2>
+      </div>
+      <p class="lede">Jeffery M. Cohen and Enrique M. Lamela bring decades of courtroom, municipal, real estate and civil practice experience to clients throughout Union County and New Jersey.</p>
+    </div>
+
+    <div class="attorney-teaser">
+      <div class="attorney-teaser-copy">
+        <p>From municipal prosecution and public defense to personal injury, real estate, landlord-tenant and criminal matters, the firm's attorneys offer broad experience with the direct access and personal attention of a local practice.</p>
+        <a class="btn" href="about.html">Meet the Attorneys</a>
+      </div>
+      <div class="attorney-teaser-points">
+        <div><strong>30+ Years</strong><span>Serving New Jersey clients</span></div>
+        <div><strong>Superior & Municipal Court</strong><span>Extensive courtroom experience</span></div>
+        <div><strong>Se habla español</strong><span>Direct bilingual communication available</span></div>
+      </div>
+    </div>
+
+    <div class="review" id="reviews">
+      <div><div class="stars">★★★★★</div><div style="font-size:.72rem;color:#69727a;margin-top:8px">Client testimonial</div></div>
+      <div><blockquote>“Both attorneys were all hands on deck and wouldn’t leave me unaware of anything that would impact my cases.”</blockquote><cite>— Sonny Dumarsais</cite></div>
+    </div>
   </div>
-  <div class="attorneys">
-    <article class="attorney">
-      <img src="https://lawofficeunionnj.com/__static/b78d48cf7cc4fdb1082bc9023b7f2316/1270309_6-2.png" alt="Jeffery M. Cohen" loading="lazy" decoding="async">
-      <div class="attorney-copy"><span>Attorney</span><h3>Jeffery M. Cohen</h3><p>Seton Hall Law graduate, former Union Township Municipal Prosecutor and longtime Public Defender. Mr. Cohen has tried numerous bench and jury trials in Superior Court and Municipal Court.</p></div>
-    </article>
-    <article class="attorney">
-      <img src="https://lawofficeunionnj.com/__static/7d4eacf5b876895503ed0204318aa9d0/1270314_6-1.png" alt="Enrique M. Lamela" loading="lazy" decoding="async">
-      <div class="attorney-copy"><span>Attorney · Fluent in Spanish</span><h3>Enrique M. Lamela</h3><p>Mr. Lamela's primary practice areas include personal injury, landlord/tenant, real estate, criminal law and municipal matters. He appears regularly in Superior and Municipal Court.</p></div>
-    </article>
-  </div>
-  <div class="review" id="reviews">
-    <div><div class="stars">★★★★★</div><div style="font-size:.72rem;color:#69727a;margin-top:8px">Client testimonial</div></div>
-    <div><blockquote>“Both attorneys were all hands on deck and wouldn’t leave me unaware of anything that would impact my cases.”</blockquote><cite>— Sonny Dumarsais</cite></div>
-  </div>
- </div>
 </section>
 <section class="cta">
  <div class="container">

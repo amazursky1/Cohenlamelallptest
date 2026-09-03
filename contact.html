@@ -908,6 +908,73 @@ body.menu-open .mobile-menu-button .bars i:nth-child(3){transform:translateY(-6p
   .contact-card,.contact-form-wrap{padding:24px}
   .contact-page-hero h1{font-size:3rem}
 }
+
+/* ===== CONTACT MAP ===== */
+.contact-map-wrap{
+  grid-column:1 / -1;
+  border:1px solid var(--line);
+  background:#fff;
+  overflow:hidden;
+  min-height:360px;
+}
+.contact-map{
+  display:block;
+  width:100%;
+  height:360px;
+  border:0;
+}
+@media(max-width:920px){
+  .contact-map-wrap{min-height:300px}
+  .contact-map{height:300px}
+}
+@media(max-width:560px){
+  .contact-map-wrap{min-height:280px}
+  .contact-map{height:280px}
+}
+
+
+/* ===== CONTACT MAP LAYOUT FIX ===== */
+.contact-map-wrap{
+  grid-column:1 / -1;
+  margin-top:2px;
+}
+.map-footer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  padding:18px 20px;
+  border-top:1px solid var(--line);
+  background:#fff;
+}
+.map-footer div{
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+}
+.map-footer strong{
+  color:var(--navy);
+}
+.map-footer span{
+  color:var(--muted);
+  font-size:.88rem;
+}
+.map-footer a{
+  color:var(--navy);
+  font-weight:800;
+  white-space:nowrap;
+}
+@media(max-width:680px){
+  .map-footer{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:12px;
+  }
+  .map-footer a{
+    white-space:normal;
+  }
+}
+
 </style>
 
 <!-- STRUCTURED DATA START -->
@@ -1028,8 +1095,7 @@ body.menu-open .mobile-menu-button .bars i:nth-child(3){transform:translateY(-6p
       <a class="phone-link" href="tel:9083642271">Call 908-364-2271 →</a>
       <div class="contact-note">For urgent or time-sensitive legal matters, calling the office directly is the best way to reach the firm.</div>
     </div>
-
-    <div class="contact-form-wrap" id="consultation-form">
+<div class="contact-form-wrap" id="consultation-form">
       <div class="kicker" style="color:#926a30">Consultation Request</div>
       <h2>Tell us how we can help.</h2>
       <p>Provide your contact information and a brief description of the matter.</p>
@@ -1044,6 +1110,26 @@ body.menu-open .mobile-menu-button .bars i:nth-child(3){transform:translateY(-6p
 
       <p class="disclaimer">Do not include confidential information. Contacting the firm does not by itself create an attorney-client relationship.</p>
     </div>
+
+    <div class="contact-map-wrap" aria-label="Map showing Cohen & Lamela, LLP office location">
+      <iframe
+        class="contact-map"
+        title="Cohen & Lamela, LLP office map"
+        src="https://www.google.com/maps?q=530+Chestnut+Street,+Union,+NJ+07083&z=16&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen>
+      </iframe>
+      <div class="map-footer">
+        <div>
+          <strong>Cohen &amp; Lamela, LLP</strong>
+          <span>530 Chestnut Street, Suite 203, Union, NJ 07083</span>
+        </div>
+        <a href="https://www.google.com/maps/search/?api=1&query=530+Chestnut+Street,+Union,+NJ+07083"
+           target="_blank" rel="noopener noreferrer">Open in Google Maps →</a>
+      </div>
+    </div>
+
   </div>
 </section>
 

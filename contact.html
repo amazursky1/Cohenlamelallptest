@@ -1016,6 +1016,17 @@ body.menu-open .mobile-menu-button .bars i:nth-child(3){transform:translateY(-6p
   }
 }
 
+
+/* ===== FORM SUBMISSION NOTE ===== */
+.contact-form-wrap .form-response-note{
+  margin:20px 0 0;
+  color:var(--muted);
+  font-size:.88rem;
+}
+.contact-form-wrap .form-response-note + .disclaimer{
+  margin-top:8px;
+}
+
 </style>
 
 <!-- STRUCTURED DATA START -->
@@ -1141,15 +1152,24 @@ body.menu-open .mobile-menu-button .bars i:nth-child(3){transform:translateY(-6p
       <h2>Tell us how we can help.</h2>
       <p>Provide your contact information and a brief description of the matter.</p>
 
-      <form class="form" onsubmit="event.preventDefault();alert('Online requests are not currently enabled. Please call 908-364-2271 to contact the office.');">
-        <input aria-label="Name" autocomplete="name" placeholder="Name">
-        <input type="tel" aria-label="Phone" autocomplete="tel" placeholder="Phone">
-        <input type="email" aria-label="Email" autocomplete="email" placeholder="Email">
-        <textarea aria-label="Message" placeholder="Briefly tell us how we can help"></textarea>
+      <form class="form"
+            action="https://formsubmit.co/amazursky1@gmail.com"
+            method="POST">
+        <input type="hidden" name="_subject" value="New Cohen & Lamela Website Consultation Request">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+        <input name="Name" aria-label="Name" autocomplete="name" placeholder="Name" required>
+        <input type="tel" name="Phone" aria-label="Phone" autocomplete="tel" placeholder="Phone" required>
+        <input type="email" name="Email" aria-label="Email" autocomplete="email" placeholder="Email" required>
+        <textarea name="Message" aria-label="Message" placeholder="Briefly tell us how we can help" required></textarea>
+
         <button class="btn gold" type="submit">Send Request</button>
       </form>
 
-      <p class="disclaimer">Do not include confidential information. Contacting the firm does not by itself create an attorney-client relationship.</p>
+      <p class="form-response-note">For urgent or time-sensitive matters, please call the office directly.</p>
+      <p class="disclaimer">Do not include confidential or time-sensitive information. Submitting this form does not by itself create an attorney-client relationship.</p>
     </div>
 
     <div class="contact-map-wrap" aria-label="Map showing Cohen & Lamela, LLP office location">

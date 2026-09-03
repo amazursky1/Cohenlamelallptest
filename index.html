@@ -996,6 +996,57 @@ body.menu-open .mobile-menu-button .bars i:nth-child(3){transform:translateY(-6p
   }
 }
 
+
+/* ===== HOMEPAGE LOCATION STRIP ===== */
+.home-location{
+  background:var(--navy);
+  color:#fff;
+  padding:44px 0;
+}
+.home-location-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:32px;
+}
+.home-location .kicker{
+  color:rgba(255,255,255,.58);
+}
+.home-location h2{
+  margin:4px 0 8px;
+  color:#fff;
+  font-size:clamp(2rem,3.6vw,3rem);
+}
+.home-location p{
+  margin:0;
+  color:rgba(255,255,255,.72);
+}
+.home-location .btn{
+  flex:0 0 auto;
+  background:#fff;
+  color:var(--navy);
+  border-color:#fff;
+}
+.home-location .btn:hover,
+.home-location .btn:focus-visible{
+  background:transparent;
+  color:#fff;
+}
+@media(max-width:760px){
+  .home-location{
+    padding:36px 0;
+  }
+  .home-location-inner{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:22px;
+  }
+  .home-location .btn{
+    width:100%;
+    text-align:center;
+  }
+}
+
 </style>
 
 <!-- STRUCTURED DATA START -->
@@ -1079,7 +1130,7 @@ body.menu-open .mobile-menu-button .bars i:nth-child(3){transform:translateY(-6p
   <a class="mobile-nav-link" href="contact.html">Contact <span>→</span></a>
 
   <a class="btn gold mobile-nav-cta" href="tel:9083642271">Call 908-364-2271</a>
-  <div class="mobile-nav-es">Se habla español</div>
+  <div class="mobile-nav-es">Consultations available in Spanish</div>
 </aside>
 
 
@@ -1229,6 +1280,19 @@ body.menu-open .mobile-menu-button .bars i:nth-child(3){transform:translateY(-6p
         <button class="review-arrow" type="button" aria-label="Next review" data-review-next>→</button>
       </div>
     </div>
+  </div>
+</section>
+
+
+<section class="home-location" aria-labelledby="home-location-heading">
+  <div class="container home-location-inner">
+    <div>
+      <div class="kicker">Union Office</div>
+      <h2 id="home-location-heading">Local counsel, right here in Union.</h2>
+      <p>530 Chestnut Street, Suite 203, Union, NJ 07083</p>
+    </div>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=530+Chestnut+Street,+Union,+NJ+07083"
+       target="_blank" rel="noopener noreferrer">Get Directions</a>
   </div>
 </section>
 
